@@ -82,6 +82,69 @@
   height: 70vh;
 }
 
+/* Mobile Responsive Landing Page */
+@media (max-width: 600px) {
+  .landingPageContainer {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  .landingPageContainer nav {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 50px;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    gap: 0.8rem;
+  }
+  .landingPageContainer nav .navlist {
+    flex-direction: row;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .landingPageContainer nav .navHeader h2 {
+    display: none;
+  }
+  .landingMainContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 0.8rem;
+    height: auto;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .landingMainContainer > div p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .landingMainContainer > div:nth-child(1) div[role="button"] {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .landingMainContainer > div:nth-child(1) div[role="button"] a {
+    font-size: 1.2rem;
+  }
+  .landingMainContainer > div:nth-child(2) img {
+    width: 80vw;
+    height: auto;
+    max-height: 40vh;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 /* Home Page CSS */
 .navBar {
   display: flex;
@@ -96,6 +159,78 @@
   height: 80vh;
   gap: 10vw;
   justify-content: center;
+}
+
+/*  Mobile Responsive HomeComponent */
+@media (max-width: 600px) {
+  .navBar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    gap: 0.8rem;
+  }
+  .navBar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .navBar > div {
+    flex-direction: row;
+    gap: 0.8rem;
+    width: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .meetContainer {
+    flex-direction: column;
+    padding-inline: 8px;
+    height: auto;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
+  .leftPanel {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .leftPanel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 0 4px;
+  }
+  .leftPanel > div > div {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+  }
+  .rightPanel {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+  .rightPanel > img {
+    width: 80vw;
+    height: auto;
+    border-radius: 16px;
+    margin: 0 auto;
+    display: block;
+    max-width: 320px;
+  }
+  .MuiTextField-root {
+    width: 90vw !important;
+    max-width: 320px;
+  }
+  .MuiButton-root {
+    min-width: 90px;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
 }
 
 .leftPanel {
