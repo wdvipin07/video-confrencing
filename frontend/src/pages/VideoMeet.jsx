@@ -500,7 +500,7 @@ export default function VideoMeetComponent() {
   return (
     <div>
       {askForUsername === true ? (
-        <div>
+        <div className={styles.lobbyContainer}>
           <h2>Enter into Lobby </h2>
           <TextField
             id="outlined-basic"

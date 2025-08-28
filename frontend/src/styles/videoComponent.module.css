@@ -1,3 +1,27 @@
+/* lobby styles */
+
+.lobbyContainer {
+  margin: 20px;
+}
+
+.lobbyContainer h2 {
+  color: #232a45;
+  padding: 1rem;
+}
+
+.lobbyContainer input {
+  padding: 10px;
+  font-size: 1rem;
+}
+.lobbyContainer button {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.lobbyContainer > div {
+  margin-bottom: 30px;
+}
+
 /* Chat Panel Styles */
 .chatRoom,
 .chatPanel {
