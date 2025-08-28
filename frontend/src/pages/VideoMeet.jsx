@@ -520,7 +520,7 @@ export default function VideoMeetComponent() {
       ) : (
         <div className={styles.meetVideoContainer}>
           {showModal ? (
-            <div className={styles.chatRoom}>
+            <div className={styles.chatPanel}>
               <div className={styles.chatContainer}>
                 <h1>Chat</h1>
 

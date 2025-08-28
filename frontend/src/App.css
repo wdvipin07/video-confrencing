@@ -173,6 +173,7 @@
   .navBar h2 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: rgb(68, 68, 204);
   }
   .navBar > div {
     flex-direction: row;
