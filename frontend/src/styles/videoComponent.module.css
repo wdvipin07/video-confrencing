@@ -48,8 +48,8 @@ body {
 }
 /* Make content fit visible area, avoid scroll */
 .meetVideoContainer {
-  min-height: calc(100vh - 72px);
-  height: calc(100vh - 72px);
+  min-height: 100dvh;
+  height: 100dvh;
   background: linear-gradient(180deg, #181c2f 60%, #232a45 100%);
   display: flex;
   flex-direction: column;
