@@ -46,14 +46,16 @@
 body {
   overflow-x: hidden;
 }
+/* Make content fit visible area, avoid scroll */
 .meetVideoContainer {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
+  height: calc(100vh - 72px);
   background: linear-gradient(180deg, #181c2f 60%, #232a45 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-bottom: 80px;
+  justify-content: center;
+  padding-bottom: 0;
   overflow-x: hidden;
 }
 /* Mobile App-like VideoMeet Styles */
@@ -116,15 +118,15 @@ body {
 
 .controlBar {
   position: fixed;
-  bottom: 0;
   left: 0;
+  bottom: env(safe-area-inset-bottom, 0);
   width: 100vw;
   background: linear-gradient(90deg, #232a45 80%, #181c2f 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 28px;
-  padding: 16px 0 24px 0;
+  padding: 16px 0 calc(24px + env(safe-area-inset-bottom, 0));
   box-shadow: 0 -2px 18px rgba(0, 0, 0, 0.12);
   z-index: 100;
 }
