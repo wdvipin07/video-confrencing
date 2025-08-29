@@ -166,7 +166,8 @@ body {
   }
 
   .meetVideoContainer {
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
     padding-bottom: 80px;
     overflow-x: hidden;
   }
