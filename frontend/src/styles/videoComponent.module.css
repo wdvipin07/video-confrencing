@@ -160,9 +160,9 @@ body {
   .chatPanel {
     width: 75vw;
     max-width: 75vw;
-    height: 82vh;
+    height: 75vh;
     right: 0;
-    bottom: 120px;
+    bottom: 110px;
     border-radius: 16px 0 0 16px;
     padding: 8px;
   }
@@ -223,7 +223,7 @@ body {
 .buttonContainers {
   position: absolute;
   width: 100vw;
-  bottom: 6vh;
+  bottom: 7vh;
   text-align: center;
 }
 
