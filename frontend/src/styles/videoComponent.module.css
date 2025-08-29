@@ -160,9 +160,9 @@ body {
   .chatPanel {
     width: 75vw;
     max-width: 75vw;
-    height: 90vh;
+    height: 82vh;
     right: 0;
-    bottom: 60px;
+    bottom: 120px;
     border-radius: 16px 0 0 16px;
     padding: 8px;
   }
@@ -213,7 +213,7 @@ body {
 
 .meetUserVideo {
   position: absolute;
-  bottom: 10vh;
+  bottom: 17vh;
   height: 20vh;
   width: auto;
   left: 0;
@@ -223,7 +223,7 @@ body {
 .buttonContainers {
   position: absolute;
   width: 100vw;
-  bottom: 0;
+  bottom: 6vh;
   text-align: center;
 }
 
