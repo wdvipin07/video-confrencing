@@ -109,7 +109,11 @@ export default function VideoMeetComponent() {
 
       if (videoAvailable || audioAvailable) {
         const userMediaStream = await navigator.mediaDevices.getUserMedia({
-          video: videoAvailable,
+          video: {
+            width: { ideal: 1920 },
+            height: { ideal: 1080 },
+            frameRate: { ideal: 30 },
+          },
           audio: audioAvailable,
         });
         if (userMediaStream) {
@@ -207,7 +211,14 @@ export default function VideoMeetComponent() {
   let getUserMedia = () => {
     if ((video && videoAvailable) || (audio && audioAvailable)) {
       navigator.mediaDevices
-        .getUserMedia({ video: video, audio: audio })
+        .getUserMedia({
+          video: {
+            width: { ideal: 1920 },
+            height: { ideal: 1080 },
+            frameRate: { ideal: 30 },
+          },
+          audio: audio,
+        })
         .then(getUserMediaSuccess)
         .then((stream) => {})
         .catch((e) => console.log(e));
@@ -437,12 +448,21 @@ export default function VideoMeetComponent() {
   };
 
   let handleVideo = () => {
-    setVideo(!video);
-    // getUserMedia();
+    if (window.localStream) {
+      window.localStream.getVideoTracks().forEach((track) => {
+        track.enabled = !track.enabled;
+        setVideo(track.enabled);
+      });
+    }
   };
+
   let handleAudio = () => {
-    setAudio(!audio);
-    // getUserMedia();
+    if (window.localStream) {
+      window.localStream.getAudioTracks().forEach((track) => {
+        track.enabled = !track.enabled;
+        setAudio(track.enabled); // React state ko real track status se sync karo
+      });
+    }
   };
 
   useEffect(() => {
