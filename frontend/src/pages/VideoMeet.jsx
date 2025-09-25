@@ -536,7 +536,7 @@ export default function VideoMeetComponent() {
           </Button>
 
           <div>
-            <video ref={localVideoref} autoPlay muted></video>
+            <video autoPlay muted></video>
           </div>
         </div>
       ) : (
@@ -618,6 +618,7 @@ export default function VideoMeetComponent() {
             ref={localVideoref}
             autoPlay
             muted
+            playsInline
           ></video>
 
           <div className={styles.conferenceView}>
@@ -631,6 +632,7 @@ export default function VideoMeetComponent() {
                     }
                   }}
                   autoPlay
+                  playsInline
                 ></video>
               </div>
             ))}
