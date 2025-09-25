@@ -113,6 +113,7 @@ export default function VideoMeetComponent() {
             width: { ideal: 1920 },
             height: { ideal: 1080 },
             frameRate: { ideal: 30 },
+            facingMode: "user",
           },
           audio: audioAvailable,
         });
@@ -216,6 +217,7 @@ export default function VideoMeetComponent() {
             width: { ideal: 1920 },
             height: { ideal: 1080 },
             frameRate: { ideal: 30 },
+            facingMode: "user",
           },
           audio: audio,
         })
